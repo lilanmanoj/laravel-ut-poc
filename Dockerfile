@@ -1,34 +1,35 @@
 FROM alpine:latest
 
 # Install Apache, PHP, Composer, and dependencies
+# php81 will be used as Laravel 8 and Laravel 10 is commonly supported on PHP 8.1
 RUN apk update && apk add --no-cache \
     apache2 \
     apache2-proxy \
-    php83 \
-    php83-fpm \
-    php83-fileinfo \
-    php83-gd \
-    php83-opcache \
-    php83-zip \
-    php83-bcmath \
-    php83-exif \
-    php83-ftp \
-    php83-iconv \
-    php83-dom \
-    php83-cli \
-    php83-mysqli \
-    php83-pdo \
-    php83-pdo_mysql \
-    php83-mbstring \
-    php83-session \
-    php83-tokenizer \
-    php83-xml \
-    php83-xmlwriter \
-    php83-curl \
-    php83-openssl \
-    php83-phar \
-    php83-ctype \
-    php83-json \
+    php81 \
+    php81-fpm \
+    php81-fileinfo \
+    php81-gd \
+    php81-opcache \
+    php81-zip \
+    php81-bcmath \
+    php81-exif \
+    php81-ftp \
+    php81-iconv \
+    php81-dom \
+    php81-cli \
+    php81-mysqli \
+    php81-pdo \
+    php81-pdo_mysql \
+    php81-mbstring \
+    php81-session \
+    php81-tokenizer \
+    php81-xml \
+    php81-xmlwriter \
+    php81-curl \
+    php81-openssl \
+    php81-phar \
+    php81-ctype \
+    php81-json \
     mysql-client \
     curl \
     unzip \
