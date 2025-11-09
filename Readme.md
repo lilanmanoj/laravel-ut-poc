@@ -2,7 +2,7 @@
 
 This project provides a **full Laravel development environment** using Docker and Docker Compose. It includes:
 
-- **Alpine Linux** as the base image  
+- **Alpine Linux 3.18** as the base image  
 - **Apache + PHP-FPM** for serving Laravel  
 - **MySQL** as the database  
 - **Redis** for caching and queue  
