@@ -60,8 +60,8 @@ RUN echo '<Directory "/var/www/html/public">' >> /etc/apache2/httpd.conf && \
 # Working directory → project root (mounted volume)
 WORKDIR /var/www/html
 
-# Install Laravel (latest)
-RUN composer create-project laravel/laravel laravel-app
+# Get and install Laravel 8
+RUN composer create-project laravel/laravel laravel-app "8.*"
 
 # Set Apache DocumentRoot to Laravel public directory
 RUN sed -i 's#DocumentRoot ".*"#DocumentRoot "/var/www/html/public"#' /etc/apache2/httpd.conf
