@@ -1,8 +1,14 @@
-FROM alpine:latest
+FROM alpine:3.18
+
+# Enable all main and community repositories
+RUN sed -i 's/^#//g' /etc/apk/repositories && \
+    grep -q "community" /etc/apk/repositories || \
+    echo "https://dl-cdn.alpinelinux.org/alpine/$(grep VERSION_ID /etc/os-release | cut -d= -f2 | tr -d '\"')/community" >> /etc/apk/repositories && \
+    apk update
 
 # Install Apache, PHP, Composer, and dependencies
 # php81 will be used as Laravel 8 and Laravel 10 is commonly supported on PHP 8.1
-RUN apk update && apk add --no-cache \
+RUN apk add --no-cache \
     apache2 \
     apache2-proxy \
     php81 \
