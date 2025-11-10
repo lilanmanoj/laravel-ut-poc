@@ -44,8 +44,8 @@
                     @foreach ($tasks as $index => $task)
                         <tr>
                             <td>{{ $tasks->firstItem() + $index }}</td>
-                            <td>{{ $task->title }}</td>
-                            <td>{{ Str::limit($task->description, 50) }}</td>
+                            <td class="text-start">{{ $task->title }}</td>
+                            <td class="text-start" title="{{ $task->description }}">{{ Str::limit($task->description, 50) }}</td>
                             <td>{{ $task->due_date ? $task->due_date->format('Y-m-d') : '—' }}</td>
                             <td>
                                 <span class="status-badge status-{{ $task->status }}">
