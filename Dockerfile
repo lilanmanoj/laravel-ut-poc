@@ -36,6 +36,7 @@ RUN apk add --no-cache \
     php81-phar \
     php81-ctype \
     php81-json \
+    php81-pecl-xdebug \
     mysql-client \
     curl \
     unzip \
