@@ -30,6 +30,7 @@ RUN apk add --no-cache \
     php81-session \
     php81-tokenizer \
     php81-xml \
+    php81-simplexml \
     php81-xmlwriter \
     php81-curl \
     php81-openssl \
