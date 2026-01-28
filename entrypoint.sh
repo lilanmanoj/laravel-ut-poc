@@ -14,6 +14,8 @@ fi
 
 cd $APP_DIR
 
+composer install --no-interaction --prefer-dist --optimize-autoloader
+
 # Ensure .env exists
 if [ ! -f "$APP_DIR/.env" ]; then
     echo ".env not found, copying from .env.example"
